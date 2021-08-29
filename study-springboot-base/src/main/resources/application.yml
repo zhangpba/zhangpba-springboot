@@ -1,0 +1,17 @@
+server:
+  port: 6000
+
+spring:
+  application:
+    name: study-springboot-base
+
+logging:
+  level:
+    root: INFO                    #默认的日志级别
+  file: log/study-springboot-base.log #生成日志文件的位置 e:/study-springboot-base.log
+
+
+demo:
+  to-who: yangruiqin
+  say-what: i love you
+  isopen: true

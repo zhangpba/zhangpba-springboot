@@ -1,0 +1,22 @@
+环境
+安装jdk
+
+一 打包
+    选择release打.tar.gz包
+
+二 打好的 .tar.gz包上传服务器解压到路径/opt/zhangpb/
+    tar -zxvf study-user.tar.gz -C /opt/zhangpb/
+
+三 执行脚本
+    ./opt/zhangpb/study-springboot-base/install.sh
+    ./opt/zhangpb/study-springboot-base/start.sh
+增加FileServiceFallBack类，编写降级处理代码
+
+
+测试：http://localhost:6000/index
+
+
+*参考文档：https://www.cnblogs.com/hello-shf/p/10864977.html#_label5
+
+未阅
+https://blog.csdn.net/qq_35794278/article/details/88662827
