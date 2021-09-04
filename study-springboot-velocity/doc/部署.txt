@@ -1,0 +1,32 @@
+环境
+安装jdk
+
+一 打包
+    选择release打.tar.gz包
+
+二 打好的 .tar.gz包上传服务器解压到路径/opt/zhangpb/
+    tar -zxvf study-user.tar.gz -C /opt/zhangpb/
+
+三 执行脚本
+    ./opt/zhangpb/study-springboot-velocity/install.sh
+    ./opt/zhangpb/study-springboot-velocity/start.sh
+增加FileServiceFallBack类，编写降级处理代码
+
+
+测试：http://127.0.0.1:6001/index
+返回结果：
+    <html>
+    <body>
+    亲爱的张三，你好！
+
+        这是测试的内容。。。
+
+    祝：开心！
+        老许
+        2021-09-05 00:33:41
+
+    </body>
+    </html>
+
+
+*参考文档：https://blog.csdn.net/weixin_34194379/article/details/86126636
