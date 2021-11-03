@@ -1,0 +1,12 @@
+server:
+  port: 6002
+
+spring:
+  application:
+    name: study-zookeeper-consumer
+
+
+logging:
+  level:
+    root: INFO                    #默认的日志级别
+  file: log/study-zookeeper-consumer.log  #生成日志文件的位置 e:/study-zookeeper-consumer.log

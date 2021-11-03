@@ -1,0 +1,31 @@
+环境
+安装jdk
+
+一 打包
+    选择release打.tar.gz包
+
+二 打好的 .tar.gz包上传服务器解压到路径/opt/zhangpb/
+    tar -zxvf study-zookeeper-consumer.tar.gz -C /opt/zhangpb/
+
+三 执行脚本
+    ./opt/zhangpb/study-zookeeper-consumer/install.sh
+    ./opt/zhangpb/study-zookeeper-consumer/start.sh
+
+
+
+    2021-10-09
+    https://blog.csdn.net/zhanglei082319/article/details/88930872
+
+    用zk作为注册中心，代替了eureka
+
+
+四 测试：
+    1.启动zookeeper
+    2.启动study-zookeeper-producer
+    3.启动study-zookeeper-consumer
+    4.执行：http://127.0.0.1:8080/consumer/id
+
+    study-zookeeper-producer中打印结果：
+    2021-10-21 22:58:13.719  INFO 13248 --- [nio-9006-exec-1] c.s.z.p.controller.ZkProducerController  : study-producer服务，服务端口:9006
+    study-zookeeper-consumer中打印结果：
+    2021-10-21 23:01:28.562  INFO 2712 --- [nio-8080-exec-5] c.s.z.c.controller.ZkConsumerController  : study-consumer服务，服务端口:8080

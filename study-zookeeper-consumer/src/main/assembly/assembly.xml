@@ -1,0 +1,73 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+	<id>package</id>
+	<formats>
+		<format>tar.gz</format>
+	</formats>
+	<includeBaseDirectory>true</includeBaseDirectory>
+	<baseDirectory>study-zookeeper-consumer</baseDirectory>
+	<fileSets>
+		<fileSet>
+			<directory>${project.build.directory}/script</directory>
+			<outputDirectory>${file.separator}lib</outputDirectory>
+			<includes>
+				<include>*.jar</include>
+			</includes>
+			<fileMode>0755</fileMode>
+		</fileSet>
+		<fileSet>
+			<directory>${project.build.directory}</directory>
+			<outputDirectory>${file.separator}</outputDirectory>
+			<includes>
+				<include>*.jar</include>
+			</includes>
+			<fileMode>0755</fileMode>
+		</fileSet>
+	</fileSets>
+	<dependencySets>
+		<!-- 项目依赖包的输出目录，下面为当前目录的lib文件夹下 -->
+		<dependencySet>
+			<useProjectArtifact>true</useProjectArtifact> <!-- 指定打包时是否包含工程自身生成的jar包 -->
+			<outputDirectory>lib</outputDirectory> <!-- 指定将这些依赖包打到包里lib目录下 -->
+			<!--<scope>runtime</scope> &lt;!&ndash; 用于管理依赖的部署，runtime表示只在运行时使用 &ndash;&gt;-->
+		</dependencySet>
+	</dependencySets>
+	<files>
+		<file>
+			<source>script/config/bootstrap.yml</source>
+			<outputDirectory>${file.separator}</outputDirectory>
+			<fileMode>0755</fileMode>
+		</file>
+		<file>
+			<source>script/systemd/studyzookeeperconsumer.service</source>
+			<outputDirectory>${file.separator}systemd</outputDirectory>
+			<fileMode>0755</fileMode>
+		</file>
+		<file>
+			<source>script/install.sh</source>
+			<outputDirectory>${file.separator}</outputDirectory>
+			<fileMode>0755</fileMode>
+		</file>
+		<file>
+			<source>script/uninstall.sh</source>
+			<outputDirectory>${file.separator}</outputDirectory>
+			<fileMode>0755</fileMode>
+		</file>
+		<file>
+			<source>script/start.sh</source>
+			<outputDirectory>${file.separator}</outputDirectory>
+			<fileMode>0755</fileMode>
+		</file>
+		<file>
+			<source>script/stop.sh</source>
+			<outputDirectory>${file.separator}</outputDirectory>
+			<fileMode>0755</fileMode>
+		</file>
+		<file>
+			<source>script/restart.sh</source>
+			<outputDirectory>${file.separator}</outputDirectory>
+			<fileMode>0755</fileMode>
+		</file>
+	</files>
+</assembly>

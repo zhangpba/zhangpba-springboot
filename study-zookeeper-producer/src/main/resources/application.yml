@@ -1,0 +1,12 @@
+server:
+  port: 6003
+
+spring:
+  application:
+    name: study-zookeeper-producer
+
+
+logging:
+  level:
+    root: INFO                    #默认的日志级别
+  file: log/study-zookeeper-producer.log  #生成日志文件的位置 e:/study-zookeeper-producer.log

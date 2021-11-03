@@ -1,0 +1,30 @@
+server:
+  port: 9005
+
+spring:
+  application:
+    name: study-zookeeper-consumer
+  cloud:
+    config:
+      enabled: false
+
+eureka:
+  client:
+    register-with-eureka: true            #是否从注册中心中获取注册信息，默认值true
+    fetch-registry: true                  #是否从注册中心获取注册消息
+    registry-fetch-interval-seconds: 30   #表示eureka client间隔多久去拉取服务器注册信息,默认为30秒
+    service-url:
+      defaultZone: http://127.0.0.1:8815/eureka/
+#      defaultZone: http://192.168.182.128:8815/eureka/   #客户端和服务器端进行交互的地址
+
+
+  instance:
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 1
+    lease-renewal-interval-in-seconds: 2
+
+
+logging:
+  level:
+    root: INFO                    #默认的日志级别
+  file: log/study-zookeeper-consumer.log  #生成日志文件的位置 e:/study-zookeeper-consumer.log

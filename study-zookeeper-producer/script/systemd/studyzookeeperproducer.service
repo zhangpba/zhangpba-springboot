@@ -1,0 +1,16 @@
+[Unit]
+Description=study-zookeeper-producer
+After=network.target
+After=syslog.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=30s
+WorkingDirectory=/opt/zhangpb/study-zookeeper-producer
+ExecStart=/home/zhangpba/software/jdk1.8.0_40/bin/java -Xms1024m -Xmx1024m -Dloader.path=/opt/zhangpb/study-zookeeper-producer/lib -jar /opt/zhangpb/study-zookeeper-producer/study-zookeeper-producer.jar
+ExecStop=/usr/bin/kill -15 $MAINPID
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-zookeeper-producer.target

@@ -1,0 +1,12 @@
+环境
+安装jdk
+
+一 打包
+    选择release打.tar.gz包
+
+二 打好的 .tar.gz包上传服务器解压到路径/opt/zhangpb/
+    tar -zxvf study-zookeeper-producer.tar.gz -C /opt/zhangpb/
+
+三 执行脚本
+    ./opt/zhangpb/study-zookeeper-producer/install.sh
+    ./opt/zhangpb/study-zookeeper-producer/start.sh
