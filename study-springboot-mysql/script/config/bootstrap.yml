@@ -1,0 +1,17 @@
+server:
+  port: 6005
+
+spring:
+  application:
+    name: study-springboot-mysql
+
+  datasource:
+      url: jdbc:mysql://127.0.0.1:3306/study?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver #5.0版本的数据库驱动配置
+
+logging:
+  level:
+    root: INFO                    #默认的日志级别
+  file: log/study-springboot-mysql.log #生成日志文件的位置 e:/study-springboot-mysql.log

@@ -1,0 +1,21 @@
+环境
+安装jdk
+
+一 打包
+    选择release打.tar.gz包
+
+二 打好的 .tar.gz包上传服务器解压到路径/opt/zhangpb/
+    tar -zxvf study-user.tar.gz -C /opt/zhangpb/
+
+三 执行脚本
+    ./opt/zhangpb/study-springboot-mysql/install.sh
+    ./opt/zhangpb/study-springboot-mysql/start.sh
+增加FileServiceFallBack类，编写降级处理代码
+
+
+测试：http://localhost:6005/index
+
+
+http://localhost:6005/swagger-ui.html
+
+* https://www.cnblogs.com/yihuihui/p/12254910.html
